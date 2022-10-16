@@ -18,7 +18,7 @@
       {
         "id": 1,
         "name": "Pano's Pizza",
-        "logo": "/panos.png",
+        "logo": "/local-logos/panos.png",
         "address": "Calle 1 #2-3",
         "description": "Esta pizzeria se especializa en ingredientes salados",
         "instagram": "https://www.instagram.com/panospanama/",
@@ -59,7 +59,7 @@
       {
         "id": 2,
         "name": "SBarro",
-        "logo": "/sbarro.png",
+        "logo": "/local-logos/sbarro.png",
         "address": "Calle 2 #3-4",
         "description": "Esta pizzeria se especializa en ingredientes picantes",
         "instagram": "https://www.instagram.com/sbarroofficial/",
@@ -100,7 +100,7 @@
       {
         "id": 3,
         "name": "Pizzeria Camión",
-        "logo": "/camion.png",
+        "logo": "/local-logos/camion.png",
         "address": "Calle 3 #4-5",
         "description": "Esta pizzeria se especializa en ingredientes vegetales",
         "instagram": "",
@@ -141,7 +141,7 @@
       {
         "id": 4,
         "name": "Voglia Di Pizza",
-        "logo": "/voglia.png",
+        "logo": "/local-logos/voglia.png",
         "address": "Calle 4 #5-6",
         "description": "Esta pizzeria se especializa en ingredientes marinos",
         "instagram": "",
@@ -182,7 +182,7 @@
       {
         "id": 5,
         "name": "Stroller Pizza",
-        "logo": "/stroller.png",
+        "logo": "/local-logos/stroller.png",
         "address": "Calle 5 #6-7",
         "description": "Esta pizzeria se especializa en ingredientes tropicales",
         "instagram": "",
@@ -223,7 +223,7 @@
       {
         "id": 6,
         "name": "Trulli",
-        "logo": "/trulli.png",
+        "logo": "/local-logos/trulli.png",
         "address": "Calle 9 #10-11",
         "description": "Esta pizzeria se especializa en ingredientes mediterraneos",
         "instagram": "",
