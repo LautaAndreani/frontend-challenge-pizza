@@ -3,6 +3,11 @@ module.exports = {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		extend: {
+			colors: {
+				login: "#707070",
+				login_title: "#000000",
+				btn: "#f9c444",
+			},
 			backgroundImage: {
 				"left-image": "url('/pizza-bg.png')",
 				"pizza-login": "url('/pizza-login.png')",

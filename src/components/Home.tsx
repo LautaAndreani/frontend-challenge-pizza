@@ -1,6 +1,7 @@
 import TwoColsLayout from "../Layout/TwoColsLayout"
 import LeftCol from "./LeftCol"
+import Login from "./Login"
 
 export default function Home() {
-	return <TwoColsLayout leftCol={<LeftCol />} rightCol={<h2>Right Col</h2>} />
+	return <TwoColsLayout leftCol={<LeftCol />} rightCol={<Login />} />
 }
