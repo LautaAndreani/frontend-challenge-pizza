@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom"
 import Home from "./Views/Home"
 import Lists from "./Views/Lists"
+import Local from "./Views/Local"
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/lists" element={<Lists />} />
-        <Route path="/lists/:local" element={<h2>Soy una pagina con id</h2>} />
+        <Route path="/lists/:local" element={<Local />} />
       </Routes>
     </div>
   )
