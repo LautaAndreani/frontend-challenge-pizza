@@ -36,10 +36,10 @@ export default function PizzaList() {
         </section>
       </div>
 
-      <footer className="bg-footer p-[1.6rem] w-full flex items-center justify-between">
-        <figure className="flex">
-          <img src="" alt="facebook logo" />
-          <img src="" alt="instagram logo" />
+      <footer className="bg-footer p-[1.55rem] w-full flex items-center justify-between">
+        <figure className="flex gap-2 w-fit">
+          <img src="/icons/facebook.svg" alt="facebook logo" className="w-5" />
+          <img src="/icons/instagram.svg" alt="instagram logo" className="w-5" />
         </figure>
         <img src="/best-pizza.png" alt="best pizza logo" className="w-14" />
       </footer>
