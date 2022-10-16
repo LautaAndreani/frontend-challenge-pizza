@@ -1,12 +1,13 @@
 import { Routes, Route } from "react-router-dom"
-import Home from "./components/Home"
+import Home from "./Views/Home"
+import Lists from "./Views/Lists"
 
 function App() {
 	return (
 		<div>
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/lists" element={<h2>Hello to lists</h2>} />
+				<Route path="/lists" element={<Lists/>} />
 			</Routes>
 		</div>
 	)
