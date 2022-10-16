@@ -18,7 +18,7 @@
       {
         "id": 1,
         "name": "Pano's Pizza",
-        "logo": "/local-logos/panos.png",
+        "logo": "https://i.imgur.com/mHpTneT.png",
         "address": "Calle 1 #2-3",
         "description": "Esta pizzeria se especializa en ingredientes salados",
         "instagram": "https://www.instagram.com/panospanama/",
@@ -59,7 +59,7 @@
       {
         "id": 2,
         "name": "SBarro",
-        "logo": "/local-logos/sbarro.png",
+        "logo": "https://i.imgur.com/vNVuOyT.png",
         "address": "Calle 2 #3-4",
         "description": "Esta pizzeria se especializa en ingredientes picantes",
         "instagram": "https://www.instagram.com/sbarroofficial/",
@@ -100,7 +100,7 @@
       {
         "id": 3,
         "name": "Pizzeria Camión",
-        "logo": "/local-logos/camion.png",
+        "logo": "https://i.imgur.com/yiECjaR.png",
         "address": "Calle 3 #4-5",
         "description": "Esta pizzeria se especializa en ingredientes vegetales",
         "instagram": "",
@@ -141,7 +141,7 @@
       {
         "id": 4,
         "name": "Voglia Di Pizza",
-        "logo": "/local-logos/voglia.png",
+        "logo": "https://i.imgur.com/iVnyxcO.png",
         "address": "Calle 4 #5-6",
         "description": "Esta pizzeria se especializa en ingredientes marinos",
         "instagram": "",
@@ -182,7 +182,7 @@
       {
         "id": 5,
         "name": "Stroller Pizza",
-        "logo": "/local-logos/stroller.png",
+        "logo": "https://i.imgur.com/xqmwqdo.png",
         "address": "Calle 5 #6-7",
         "description": "Esta pizzeria se especializa en ingredientes tropicales",
         "instagram": "",
@@ -223,7 +223,7 @@
       {
         "id": 6,
         "name": "Trulli",
-        "logo": "/local-logos/trulli.png",
+        "logo": "https://i.imgur.com/yv7RWdy.png",
         "address": "Calle 9 #10-11",
         "description": "Esta pizzeria se especializa en ingredientes mediterraneos",
         "instagram": "",
