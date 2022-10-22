@@ -1,8 +1,15 @@
+import React, { useState } from "react"
 import { Link } from "react-router-dom"
-import pizzas from "../api.json"
+import pizzasLocals from "../api.json"
 import { PizzasLocals } from "../models/types"
 
 export default function PizzaList() {
+	const {response: { stores }} = pizzasLocals
+	const [pizzas, setPizzas] = useState<PizzasLocals[]>(stores)
+	function handleFilter (e:React.ChangeEvent<HTMLInputElement>) {
+		return setPizzas(stores.filter(pizza => pizza.name.toLowerCase().includes(e.target.value)))
+	}
+
 	return (
 		<main className="min-h-screen flex flex-col justify-between">
 			<header className=" w-full">
@@ -21,8 +28,12 @@ export default function PizzaList() {
 					<p className="text-login">Escoge tu pizzería favorita</p>
 				</span>
 
+				<div className="border-2 border-login px-2 py-2 rounded-md w-1/2">
+					<input type="text" onChange={handleFilter} placeholder="Buscá tu pizzería favorita" className="outline-none w-full" />
+				</div>
+
 				<section className="pizzerias flex flex-wrap gap-6">
-					{pizzas.response.stores.map((local: PizzasLocals) => (
+					{pizzas.map((local: PizzasLocals) => (
 						<span role="button" key={local.id}>
 							<Link to={`/lists/${local.id}`}>
 								<figure>
