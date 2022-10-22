@@ -20,7 +20,7 @@ export default function Login() {
 				<p className="text-1xl text-login">A las mejores pizzas del país</p>
 			</div>
 
-			<form className="flex flex-col gap-4 w-1/3" onSubmit={handleSubmit}>
+			<form className="flex flex-col gap-4 w-1/2" onSubmit={handleSubmit}>
 				<Input placeholder="Usuario" ico={"user"} />
 				<Input placeholder="Contraseña" ico={"password"} />
 				<button>¿Olvidaste tu contraseña?</button>
