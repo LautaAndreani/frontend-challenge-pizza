@@ -12,18 +12,19 @@ export default function Local() {
 		return (
 			<div className="min-h-screen bg-gray-100">
 				<div className="container bg-left-image bg-no-repeat bg-cover min-h-[10rem] min-w-full relative bg-login">
-					<figure className="absolute top-10 left-20">
-						<img src={getLocal.logo} alt={`logo de ${getLocal.name}`} />
+					<figure className="absolute top-20 left-[50%] -translate-x-[50%] w-fit">
+						<img src={getLocal.logo} alt={`logo de ${getLocal.name}`} className="hover:scale-[1.05] transition w-[10rem]" />
 					</figure>
 				</div>
-				<section className="local-info w-[75%] my-0 mx-auto px-10 mt-4 flex justify-between">
+				<div className="container w-[75%] my-0 mx-auto">
+				<section className="local-info mt-20 w-full  mx-auto px-10 pt-5 flex justify-between">
 					<ul>
 						<span className="flex gap-2 items-center">
 							<li className="text-3xl font-bold">{getLocal.name} </li>
 							<li> - {getLocal.address}</li>
 						</span>
 						<li className="text-xl"> {getLocal.description}</li>
-						<Link to="/lists" className="hover:border-b-4 hover:border-btn min-h-[2rem]">
+						<Link to="/lists" className="border-b-4 border-btn h-1">
 							&larr; Volver a la lista
 						</Link>
 					</ul>
@@ -41,14 +42,18 @@ export default function Local() {
 					</span>
 				</section>
 				<div className="container mt-20 py-6 flex gap-4 flex-wrap justify-center w-full mx-auto">
+					<h2 className="w-full ml-20 text-2xl font-bold">
+					Menú 🍕
+					</h2>
 					{getLocal.products.map(product => (
-						<div key={product.id} className="bg-gray-200 rounded-xl flex h-[10rem] items-center max-w-[45%] min-w-[45%] hover:scale-[.98]">
-							<span className="bg-gray-300 min-h-full">
+						<div key={product.id} className="bg-gray-200 rounded-xl flex h-[10rem] items-center max-w-[45%] min-w-[45%] transition hover:scale-[.98] cursor-pointer">
+							<span className="bg-gray-300 min-h-full min-w-fit">
 								<img src={product.img} alt={product.name} className="object-cover rounded-full transition-all w-40 p-4" />
 							</span>
 							<p className="text-2xl font-bold p-5">{product.name}</p>
 						</div>
 					))}
+				</div>
 				</div>
 			</div>
 		)
