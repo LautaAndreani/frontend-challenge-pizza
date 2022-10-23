@@ -4,7 +4,9 @@ import { formValidations } from "../helpers/validations"
 import { FormValues } from "../models/types"
 import Input from "./Input"
 
-export default function Login({setUser}) {
+type Props = {setUser: React.Dispatch<React.SetStateAction<Boolean | null>>}
+
+export default function Login({ setUser }: Props) {
 	const [formState, setFormState] = useState<FormValues>({email: '', password: ''}) 	
 	const navigate = useNavigate()
 	function handleSubmit(e: React.FormEvent<HTMLFormElement>) {

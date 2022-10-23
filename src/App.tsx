@@ -5,7 +5,7 @@ import Lists from "./Views/Lists"
 import Local from "./Views/Local"
 
 function App() {
-	const [user, setUser] = useState(null)
+	const [user, setUser] = useState<Boolean | null>(null)
 	return (
 		<div>
 			<Routes>
