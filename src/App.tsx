@@ -1,15 +1,17 @@
+import { useState } from "react"
 import { Routes, Route } from "react-router-dom"
 import Home from "./Views/Home"
 import Lists from "./Views/Lists"
 import Local from "./Views/Local"
 
 function App() {
+	const [user, setUser] = useState(null)
 	return (
 		<div>
 			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/lists" element={<Lists />} />
-				<Route path="/lists/:localId" element={<Local />} />
+				<Route path="/" element={<Home setUser={setUser}/>} />
+				<Route path="/lists" element={<Lists user={user}/>} />
+				<Route path="/lists/:localId" element={<Local user={user}/>} />
 			</Routes>
 		</div>
 	)
