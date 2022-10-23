@@ -22,7 +22,7 @@ export default function Input({ placeholder, nameInput = "user", type = "text", 
 				name={nameInput}
 				placeholder={placeholder}
 				className="min-h-[3rem] focus:outline-none w-full"
-				autoFocus={ico === "user" && true}
+				autoFocus={ico === "user"}
 				onChange={handleChange}
         required
 			/>

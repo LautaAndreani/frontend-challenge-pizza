@@ -3,9 +3,9 @@ import { Link, Navigate } from "react-router-dom"
 import pizzasLocals from "../api.json"
 import { PizzasLocals } from "../models/types"
 
-type Props = {user: Boolean | null}
+type Props = {user: Boolean | null, setUser: React.Dispatch<React.SetStateAction<Boolean | null>>}
 
-export default function PizzaList({ user }: Props) {
+export default function PizzaList({ user, setUser }: Props) {
 	if(!user) return <Navigate to="/" />
 	const {response: { stores }} = pizzasLocals
 	const [pizzas, setPizzas] = useState<PizzasLocals[]>(stores)
@@ -17,7 +17,7 @@ export default function PizzaList({ user }: Props) {
 		<main className="min-h-screen flex flex-col justify-between">
 			<header className=" w-full">
 				<nav className="flex items-center justify-end w-full p-8">
-					<button className="flex items-center">
+					<button className="flex items-center" onClick={() => setUser(null)}>
 						<img src="/password.png" alt="icono cerrar sesion" className="w-6" />
 						Salir
 					</button>

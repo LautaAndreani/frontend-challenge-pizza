@@ -19,7 +19,7 @@ export default function Login({ setUser }: Props) {
 	return (
 		<div className="container min-w-full min-h-screen flex flex-col justify-center items-center text-center gap-10">
 			<div className="logo">
-				<img src="/b-pizza-b.png" alt="best pizza logo" className="w-[15rem]" />
+				<img src="/b-pizza-b.png" alt="best pizza logo" className="md:w-[15rem] w-[10rem]" />
 			</div>
 
 			<div className="flex flex-col gap-2">
