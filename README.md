@@ -73,3 +73,7 @@ previous points, were completed correctly.
   other information that you consider necessary. Additionally we would like you
   to leave the arguments of the technical decisions you made regarding
   design, code and / or technologies when testing.
+  
+## User
+- pperez@perez.com
+- rp1234
