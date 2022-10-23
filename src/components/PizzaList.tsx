@@ -21,18 +21,18 @@ export default function PizzaList() {
 				</nav>
 			</header>
 
-			<div className="container p-8 flex flex-col gap-8 justify-between">
+			<div className="container p-8 flex flex-col gap-4 justify-between">
 				<h2 className="border-b-2 border-btn w-fit text-xl text-login">Pizzerías</h2>
 				<span>
 					<p className="text-3xl font-bold">Tiendas</p>
 					<p className="text-login">Escoge tu pizzería favorita</p>
 				</span>
-
-				<div className="border-2 border-login px-2 py-2 rounded-md w-1/2">
+				
+				<div className="border-2 border-login px-2 py-2 rounded-md sm:w-3/4 w-full ">
 					<input type="text" onChange={handleFilter} placeholder="Buscá tu pizzería favorita" className="outline-none w-full" />
 				</div>
 
-				<section className="pizzerias flex flex-wrap gap-6">
+				<section className="pizzerias grid grid-cols-2 sm:grid-cols-3 gap-6 sm:justify-start w-fit">
 					{pizzas.map((local: PizzasLocals) => (
 						<span role="button" key={local.id}>
 							<Link to={`/lists/${local.id}`}>
@@ -52,7 +52,7 @@ export default function PizzaList() {
 					<img src="/icons/facebook.svg" alt="facebook logo" className="w-5" />
 					<img src="/icons/instagram.svg" alt="instagram logo" className="w-5" />
 				</figure>
-				<img src="/best-pizza.png" alt="best pizza logo" className="w-14" />
+				<img src="/best-pizza.png" alt="best pizza logo" className="w-14 grayscale" />
 			</footer>
 		</main>
 	)

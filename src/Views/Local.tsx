@@ -16,19 +16,19 @@ export default function Local() {
 						<img src={getLocal.logo} alt={`logo de ${getLocal.name}`} className="hover:scale-[1.05] transition w-[10rem]" />
 					</figure>
 				</div>
-				<div className="container w-[75%] my-0 mx-auto">
-				<section className="local-info mt-20 w-full  mx-auto px-10 pt-5 flex justify-between">
+				<div className="container xl:w-[75%] w-full my-0 mx-auto">
+				<section className="local-info mt-20 w-full mx-auto xl:px-10 px-5 pt-5 flex flex-wrap justify-between">
 					<ul>
-						<span className="flex gap-2 items-center">
+						<span className="flex flex-wrap gap-2 items-center">
 							<li className="text-3xl font-bold">{getLocal.name} </li>
-							<li> - {getLocal.address}</li>
+							<li className="w-fit"> - {getLocal.address}</li>
 						</span>
 						<li className="text-xl"> {getLocal.description}</li>
 						<Link to="/lists" className="border-b-4 border-btn h-1">
 							&larr; Volver a la lista
 						</Link>
 					</ul>
-					<span className="invert flex gap-4">
+					<span className="invert flex gap-4 mt-2">
 						{getLocal.instagram && (
 							<a href={getLocal.instagram} target="_blank">
 								<img src="/icons/instagram.svg" alt={`${getLocal.name} instagram link`} className="w-10" />
@@ -41,12 +41,12 @@ export default function Local() {
 						)}
 					</span>
 				</section>
-				<div className="container mt-20 py-6 flex gap-4 flex-wrap justify-center w-full mx-auto">
-					<h2 className="w-full ml-20 text-2xl font-bold">
+				<div className="container mt-20 py-6 flex gap-4 flex-wrap justify-center xl:w-full xl:px-0 px-4 mx-auto">
+					<h2 className="w-full xl:ml-20 ml-0 text-2xl font-bold">
 					Menú 🍕
 					</h2>
 					{getLocal.products.map(product => (
-						<div key={product.id} className="bg-gray-200 rounded-xl flex h-[10rem] items-center max-w-[45%] min-w-[45%] transition hover:scale-[.98] cursor-pointer">
+						<div key={product.id} className="bg-gray-200 rounded-xl flex h-[10rem] items-center max-w-[45%] xl:min-w-[45%] min-w-full transition hover:scale-[.98] cursor-pointer">
 							<span className="bg-gray-300 min-h-full min-w-fit">
 								<img src={product.img} alt={product.name} className="object-cover rounded-full transition-all w-40 p-4" />
 							</span>
