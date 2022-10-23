@@ -1,9 +1,12 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom"
 import pizzasLocals from "../api.json"
 import { PizzasLocals } from "../models/types"
 
-export default function PizzaList() {
+type Props = {user: Boolean | null}
+
+export default function PizzaList({ user }: Props) {
+	if(!user) return <Navigate to="/" />
 	const {response: { stores }} = pizzasLocals
 	const [pizzas, setPizzas] = useState<PizzasLocals[]>(stores)
 	function handleFilter (e:React.ChangeEvent<HTMLInputElement>) {

@@ -1,12 +1,19 @@
+import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { formValidations } from "../helpers/validations"
+import { FormValues } from "../models/types"
 import Input from "./Input"
 
-export default function Login() {
+type Props = {setUser: React.Dispatch<React.SetStateAction<Boolean | null>>}
+
+export default function Login({ setUser }: Props) {
+	const [formState, setFormState] = useState<FormValues>({email: '', password: ''}) 	
 	const navigate = useNavigate()
 	function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
 		e.preventDefault()
-		// Validations...
-		navigate('/lists')
+		if(formValidations(formState))
+		setUser(true)
+		return navigate('/lists')
 	}
 
 	return (
@@ -21,8 +28,8 @@ export default function Login() {
 			</div>
 
 			<form className="flex flex-col gap-4 w-1/2" onSubmit={handleSubmit}>
-				<Input placeholder="Usuario" ico={"user"} />
-				<Input placeholder="Contraseña" ico={"password"} />
+				<Input placeholder="Usuario" ico={"user"} type="text" nameInput="email" setFormState={setFormState} />
+				<Input placeholder="Contraseña" ico={"password"} type="password" nameInput="password" setFormState={setFormState} />
 				<button>¿Olvidaste tu contraseña?</button>
 				<input type="submit" role="button" value="Iniciar Sesión" className="p-4 bg-btn font-bold"  />
 			</form>
