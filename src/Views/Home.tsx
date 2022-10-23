@@ -1,9 +1,9 @@
 import TwoColsLayout from "../Layout/TwoColsLayout"
 import LeftCol from "../components/LeftCol"
 import Login from "../components/Login"
+import { LoginProps } from "../models/types"
 
-type Props = {setUser: React.Dispatch<React.SetStateAction<Boolean | null>>}
 
-export default function Home({ setUser }:Props ) {
+export default function Home({ setUser }:Pick<LoginProps, 'setUser'> ) {
 	return <TwoColsLayout leftCol={<LeftCol />} rightCol={<Login setUser={setUser}/>} />
 }

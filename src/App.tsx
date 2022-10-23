@@ -10,7 +10,7 @@ function App() {
 		<div>
 			<Routes>
 				<Route path="/" element={<Home setUser={setUser}/>} />
-				<Route path="/lists" element={<Lists user={user}/>} />
+				<Route path="/lists" element={<Lists user={user} setUser={setUser}/>} />
 				<Route path="/lists/:localId" element={<Local user={user}/>} />
 			</Routes>
 		</div>

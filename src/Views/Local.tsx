@@ -1,9 +1,9 @@
 import { useMemo } from "react"
 import { Link, Navigate, useParams } from "react-router-dom"
 import api from "../api.json"
-type Props = { user: Boolean | null }
+import { LoginProps } from "../models/types"
 
-export default function Local({ user }: Props) {
+export default function Local({ user }: Pick<LoginProps, 'user'>) {
 	if (!user) return <Navigate to="/" />
 	const { localId = "1" } = useParams()
 	const getCurrentLocal = (localId: string) => api.response.stores.find(pizza => pizza.id === Number(localId))
