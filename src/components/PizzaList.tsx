@@ -32,15 +32,15 @@ export default function PizzaList({ user, setUser }: Props) {
 				</span>
 				
 				<div className="border-2 border-login px-2 py-2 rounded-md sm:w-3/4 w-full ">
-					<input type="text" onChange={handleFilter} placeholder="Buscá tu pizzería favorita" className="outline-none w-full" />
+					<input type="text" onChange={handleFilter} placeholder="Buscá tu pizzería favorita" className="outline-none w-full" autoFocus />
 				</div>
 
-				<section className="pizzerias grid grid-cols-2 sm:grid-cols-3 gap-6 sm:justify-start w-fit">
+				<section className="pizzerias grid grid-cols-2 sm:grid-cols-3 gap-6 sm:justify-start w-fit min-h-[34rem]">
 					{pizzas.map((local: PizzasLocals) => (
-						<span role="button" key={local.id}>
+						<span role="button" className="hover:scale-95 transition" key={local.id}>
 							<Link to={`/lists/${local.id}`}>
 								<figure>
-									<img src={local.logo} alt={local.name} />
+									<img src={local.logo} alt={local.name} className="min-h-[200px]" />
 									<figcaption className="font-bold">{local.name}</figcaption>
 								</figure>
 								<p>{local.address}</p>
